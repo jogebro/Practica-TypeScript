@@ -4,29 +4,55 @@
 Ejecutar este comando en la terminal para la instalación:
 
 ```shell
-npm install -g typescript
+npm install -g typescript 
 ```
 
 Verificar la instalación de TypeScript ejecutando:
 
 ```shell
-tsc -v
+tsc -v 
 ```
 
 !Con esto ya estaria instalado TypeScript en el sistema!
 
 ## Transpilación
-
 Para transpilar archivos se realiza el siguiente comando:
 
 ```shell
-tsc nombreDelArchivo.ts
+tsc nombreDelArchivo.ts 
 ```
 
-## Ejecución
+Para transpilar el codigo en una carpeta especifica usamos:
 
+```shell
+tsc --outDir dist nombreDelArchivo.ts 
+```
+
+- **--outDir**: Este comando se utiliza para especificar la carpeta de salida.
+- **dist**: Es el nombre de la carpeta donde deseas guardar los archivos transpilados.
+
+Si queremos que el codigo se transpile automaticamente con cada cambio podemos usar:
+
+```shell
+tsc nombreDelArchivo.ts --w 
+```
+ Ó
+```shell
+tsc --outDir dist nombreDelArchivo.ts --w  
+```
+
+- **--w, --watch**: Se utiliza para que se observen los cambios que se realicen en el archivo y se transpilen.
+
+## Ejecución
 Para ejecutar el codigo ya transpilado se usa este comando:
 
 ```shell
-node nombreDelArchivo.js
+node nombreDelArchivo.js 
 ```
+
+Si el archivo esta en una carpeta se hace la ruta de esta forma:
+
+```shell
+node dist/nombreDelArchivo.js
+```
+
