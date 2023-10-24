@@ -19,13 +19,13 @@ tsc -v
 Para transpilar archivos se realiza el siguiente comando:
 
 ```shell
-tsc nombreDelArchivo.ts 
+tsc index.ts 
 ```
 
 Para transpilar el codigo en una carpeta especifica usamos:
 
 ```shell
-tsc --outDir dist nombreDelArchivo.ts 
+tsc --outDir dist index.ts 
 ```
 
 - **--outDir**: Este comando se utiliza para especificar la carpeta de salida.
@@ -34,11 +34,11 @@ tsc --outDir dist nombreDelArchivo.ts
 Si queremos que el codigo se transpile automaticamente con cada cambio podemos usar:
 
 ```shell
-tsc nombreDelArchivo.ts --w 
+tsc index.ts --w 
 ```
  Ó
 ```shell
-tsc --outDir dist nombreDelArchivo.ts --w  
+tsc --outDir dist index.ts --w  
 ```
 
 - **--w, --watch**: Se utiliza para que se observen los cambios que se realicen en el archivo y se transpilen.
@@ -47,12 +47,12 @@ tsc --outDir dist nombreDelArchivo.ts --w
 Para ejecutar el codigo ya transpilado se usa este comando:
 
 ```shell
-node nombreDelArchivo.js 
+node index.js 
 ```
 
 Si el archivo esta en una carpeta se hace la ruta de esta forma:
 
 ```shell
-node dist/nombreDelArchivo.js
+node dist/index.js
 ```
 
