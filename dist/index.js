@@ -1,2 +1,3 @@
-var userName = "Joel";
-console.log("Hello World!, my name is ".concat(userName));
+"use strict";
+const userName = "Joel";
+console.log(`Hello World!, my name is ${userName}`);
